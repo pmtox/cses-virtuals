@@ -10,7 +10,6 @@ void solve(){
     std::ofstream outputF("output.txt");
     ll x , y , m;
     std::cin>>x>>y>>m;
-    ll m1 = m;
     ll ans = 0;
     for(i , m / x){
         int k = m - x * i;

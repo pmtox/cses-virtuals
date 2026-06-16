@@ -10,6 +10,7 @@ void solve(){
     int cnt = *max_element(arr.begin() , arr.end()) - *min_element(arr.begin() , arr.end());
     cout<<cnt+1<<endl;
 }
+// 
 int32_t main(){
     int t;cin>>t;
     while(t--){

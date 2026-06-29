@@ -11,8 +11,9 @@ void solve(){
         if(s[i] > s[i+1]){
             cout<<"YES"<<endl;
             cout<<i+1<<" "<<i+2<<endl;
-            break;
+            
             flag = 1;
+            break;
         }
     }
     if(flag == 0){

@@ -4,8 +4,8 @@ using namespace std;
 void getPref(const vector<int>&arr){
     int n = arr.size();
     int mx = *max_element(arr.begin() , arr.end());
-    vector<int>pref(mx , 0);
-    for(int i = 0 ; i < mx ; i++){
+    vector<int>pref(mx + 1 , 0);
+    for(int i = 0 ; i < n ; i++){
         pref[arr[i]]++;
     }
     for(int i : pref){

@@ -27,7 +27,12 @@ void solve(){
             min_odd = min(min_odd , prefix[i]);
         }
     }
-    cout<<ans<<endl;
+    if(ans != INT_MIN){
+        cout<<ans<<endl;
+    }
+    else{
+        cout<<"NO EVEN SUM"<<endl;
+    }
 }
 int32_t main(){
     solve();

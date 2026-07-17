@@ -26,3 +26,53 @@ int32_t main(){
     }
     return 0;
 }
+
+// 2nd sol
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define IOS ios::sync_with_stdio(false); cin.tie(NULL);
+void solve(){
+    ll n , k , a , b;
+    cin>>n>>k>>a>>b;
+    vector<vector<ll>> v(n , vector<ll>(2));
+    for(int i = 0 ; i < n ; i++){
+        cin>>v[i][0]>>v[i][1];    
+    }
+    if(a <= k && b <= k){
+        cout<<"0"<<endl;
+    }
+    else if(a > k && b <= k || b > k && a <= k){
+        ll maxi = max(a , b);
+        ll lngdist = LLONG_MAX;
+        for(ll i = 0 ; i < k ; i++){
+            ll disstt = llabs((ll)v[i][0] - (ll)v[maxi - 1][0]) + llabs((ll)v[i][1] - (ll)v[maxi - 1][1]);
+            lngdist = min(disstt , lngdist);
+        }
+        cout<<lngdist<<endl;
+    }
+    else{
+        ll miniA = LLONG_MAX , miniB = LLONG_MAX , 
+        disAB = labs((ll)v[a - 1][0] - (ll)v[b - 1][0]) + llabs((ll)v[a - 1][1] - (ll)v[b - 1][1]);
+        for(int i = 0 ; i < k ; i++){
+            ll disA = llabs((ll)v[i][0] - (ll)v[a - 1][0]) + llabs((ll)v[i][1] - (ll)v[a - 1][1]);
+            ll disB = llabs((ll)v[i][0] - (ll)v[b - 1][0]) + llabs((ll)v[i][1] - (ll)v[b - 1][1]); 
+            miniA = min(disA , miniA);
+            miniB = min(disB , miniB);
+        }
+        if(k > 0){
+            cout<<min(miniA + miniB , disAB)<<endl;
+        }
+        else{
+            cout<<disAB<<endl;
+        }
+    }
+}
+int32_t main(){
+    IOS;
+    int t;cin>>t;
+    while(t--){
+        solve();
+    }
+    return 0;
+}

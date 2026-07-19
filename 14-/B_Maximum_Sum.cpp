@@ -16,10 +16,10 @@ void solve(){
         pref[i] = pref[i - 1] + arr[i];
     }
     for(int i = 0 ; i <= k ; i++){
-        ll sec = k - i;
-        ll lef = 2 * i;
-        ll rig = n - sec - 1;
-        ll sum = pref[rig] - (lef == 0 ? 0 : pref[lef - 1]);
+        ll sec = k - i; // to get the number of second operations
+        ll lef = 2 * i; // to get the number of elements removed by first operation i = first
+        ll rig = n - sec - 1; // to get the last index of last element not removed by second operation
+        ll sum = pref[rig] - (lef == 0 ? 0 : pref[lef - 1]); // sum of remaining elements
         maxi = max(maxi , sum);
     }
     cout<<maxi<<endl;

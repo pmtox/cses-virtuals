@@ -8,7 +8,7 @@ void solve(){
     for(int i = 0 ; i < m ; i++){
         ll a;cin>>a;
         ll dist = a - curr;
-        if(dist < 0)dist += n;
+        if(dist < 0) dist += n;
         ans += dist;
         curr = a;
     }

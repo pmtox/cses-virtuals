@@ -8,7 +8,7 @@ vector<vector<ll>> gph_create(vector<vector<ll>>&adj_ls , ll m){
         ll u , v;
         cin>>u>>v;
         ans[u].push_back(v);
-        // ans[v].push_back(u); -> for undirected
+        // ans[v].push_back(u); // -> for undirected
     }
     return ans;
 }

@@ -12,18 +12,18 @@ void solve(){
         pref[i + 1][charr]++;
     }
     ll q;cin>>q; // no. of queries
-    for(int i = 0 ; i < n ; i++){
+    for(int i = 0 ; i < q ; i++){
         ll a , b;cin>>a>>b;
         char maxS = '?';
         ll maxi = -1;
-        for(int char_id = 0 ; char_id <= 26 ; char_id++){
+        for(int char_id = 0 ; char_id < 26 ; char_id++){
             ll freqq = pref[b + 1][char_id] - pref[a][char_id];
             if(freqq > maxi){
                 maxS = 'a' + char_id;
                 maxi = freqq;
             }
         }
-        cout<<maxS << " : " << maxi <<endl;
+        cout<< maxS << " : " << maxi <<endl;
     }
 }
 int32_t main(){

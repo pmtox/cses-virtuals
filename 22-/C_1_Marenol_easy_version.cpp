@@ -6,8 +6,8 @@ using namespace std;
 void solve(){
     ll n;cin>>n;
     string s1 , s2;cin>>s1 >> s2;
-    ll s1cnt1 = 0 , s1cnt0 = 0;
-    ll s2cnt1 = 0 , s2cnt0 = 0;
+    ll s1cnt1 = 0 , s1cnt0 = 0; // even odd counting variable it is
+    ll s2cnt1 = 0 , s2cnt0 = 0; // for string 2 it is
     for(int i = 0 ; i < n ; i++){
         if(s1[i] == '1'){
             if(i % 2) s1cnt1++;

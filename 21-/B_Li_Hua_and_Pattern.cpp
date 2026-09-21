@@ -2,7 +2,7 @@
 using namespace std;
 #define ll long long
 #define IOS ios::sync_with_stdio(false);cin.tie(nullptr);
-#define isok(fxn) (fxn ? "YES" : "NO")
+// #define isok(fxn) (fxn ? "YES" : "NO")
 void solve(){
     ll n , k;
     cin>>n>>k;

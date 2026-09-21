@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-#define IOS ios::sync_with_ios(false); cin.tie(nullptr);
+#define IOS ios::sync_with_stdio(false); cin.tie(nullptr);
 void solve(){
     string s;cin>>s;
     if(s[0] != s[1]){
@@ -11,6 +11,7 @@ void solve(){
     }
 }
 int32_t main(){
+    IOS;
     solve();
     return 0;
 }

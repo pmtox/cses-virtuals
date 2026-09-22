@@ -9,6 +9,7 @@ void solve(){
     cout<<((d % 2 == 0) ? (d / 2) : -1)<<endl;
 }
 int32_t main(){
+    IOS;
     solve();
     return 0;
 }
